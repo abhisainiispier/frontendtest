@@ -1,0 +1,177 @@
+.status-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-left: 5px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.status-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.status-card--success {
+  border-left-color: #10b981;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+.status-card--error {
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+}
+
+.status-card--warning {
+  border-left-color: #f59e0b;
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+}
+
+.status-card--loading {
+  border-left-color: #6366f1;
+}
+
+.status-card--neutral {
+  border-left-color: #9ca3af;
+}
+
+.status-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.status-card__icon {
+  font-size: 28px;
+  margin-right: 12px;
+}
+
+.status-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.status-card__body {
+  margin-top: 12px;
+}
+
+.status-card__indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: pulse 2s infinite;
+}
+
+.status-indicator--success {
+  background-color: #10b981;
+}
+
+.status-indicator--error {
+  background-color: #ef4444;
+}
+
+.status-indicator--warning {
+  background-color: #f59e0b;
+}
+
+.status-indicator--loading {
+  background-color: #6366f1;
+}
+
+.status-indicator--neutral {
+  background-color: #9ca3af;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.status-card__status {
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.status-card__details {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.status-card__details ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.status-card__details li {
+  margin-bottom: 6px;
+}
+
+.status-card__loading,
+.status-card__error {
+  margin: 0;
+  font-size: 14px;
+}
+
+.status-card__loading {
+  color: #6366f1;
+  font-style: italic;
+}
+
+.status-card__error {
+  color: #ef4444;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .status-card {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f3f4f6;
+  }
+
+  .status-card--success {
+    border-left-color: #10b981;
+    background: linear-gradient(135deg, #064e3b 0%, #1f2937 100%);
+  }
+
+  .status-card--error {
+    border-left-color: #ef4444;
+    background: linear-gradient(135deg, #7f1d1d 0%, #1f2937 100%);
+  }
+
+  .status-card--warning {
+    border-left-color: #f59e0b;
+    background: linear-gradient(135deg, #78350f 0%, #1f2937 100%);
+  }
+
+  .status-card__title {
+    color: #f3f4f6;
+  }
+
+  .status-card__status {
+    color: #d1d5db;
+  }
+
+  .status-card__details {
+    border-top-color: #374151;
+    color: #9ca3af;
+  }
+}

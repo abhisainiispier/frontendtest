@@ -1,0 +1,132 @@
+.system-info-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.system-info-container h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: #1f2937;
+}
+
+.system-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.system-info-section {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #6366f1;
+}
+
+.system-info-section h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #374151;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item .label {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.info-item .value {
+  color: #1f2937;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  word-break: break-all;
+}
+
+.refresh-system-btn {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.refresh-system-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.system-info-loading,
+.system-info-error {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.system-info-error {
+  color: #ef4444;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .system-info-container {
+    background: #1f2937;
+    color: #f3f4f6;
+  }
+
+  .system-info-container h2 {
+    color: #f3f4f6;
+  }
+
+  .system-info-section {
+    background: #374151;
+    border-left-color: #8b5cf6;
+  }
+
+  .system-info-section h3 {
+    color: #f3f4f6;
+  }
+
+  .info-item {
+    border-bottom-color: #4b5563;
+  }
+
+  .info-item .label {
+    color: #d1d5db;
+  }
+
+  .info-item .value {
+    color: #f3f4f6;
+  }
+
+  .system-info-loading,
+  .system-info-error {
+    background: #1f2937;
+    color: #9ca3af;
+  }
+
+  .system-info-error {
+    color: #fecaca;
+  }
+}
